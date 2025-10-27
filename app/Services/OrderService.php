@@ -8,6 +8,7 @@ use App\Discount\Strategies\PercentageDiscount;
 use App\Discount\Strategies\FixedDiscount;
 use App\Discount\Strategies\VipDiscount;
 use App\Discount\DiscountStrategy;
+use App\Discount\Strategies\SeasonalDiscount;
 
 class OrderService
 {
@@ -57,6 +58,7 @@ class OrderService
             'fixed' => new FixedDiscount(),
             'percentage' => new PercentageDiscount(),
             'vip' => new VipDiscount(),
+            'seasonal' => new SeasonalDiscount(),
             default => throw new \InvalidArgumentException("Tipo de desconto inválido."),
         };
     }
