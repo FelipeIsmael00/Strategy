@@ -1,0 +1,16 @@
+<?PHP
+
+namespace App\Discount\Strategies;
+
+use App\Discount\DiscountStrategy;
+
+class SeasonalDiscount implements DiscountStrategy
+{
+    public function calculate(float $orderAmount): float
+    {
+        if ($orderAmount > 300) {
+            return 45.00;
+        }
+        return 10.00;
+    }
+}
