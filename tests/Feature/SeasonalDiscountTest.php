@@ -16,8 +16,7 @@ class SeasonalDiscountTest extends TestCase
         // Executa o cálculo do desconto para um pedido de 350,00.
         $resultado = $discount->calculate(350.00);
 
-        // Verifica se o resultado retornado é igual a 45,00.
-        // Se não for, o teste falhará.
+        // Verifica se o resultado retornado é igual a 45,00, Se não for o teste falha
         $this->assertEquals(45.00, $resultado);
     }
 
