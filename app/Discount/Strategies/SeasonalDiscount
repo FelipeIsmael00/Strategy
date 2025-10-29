@@ -1,16 +1,22 @@
-<?PHP
+<?php
 
 namespace App\Discount\Strategies;
 
+// Importa a interface DiscountStrategy, que a classe SeasonalDiscount vai implementar.
 use App\Discount\DiscountStrategy;
 
+// Define a classe SeasonalDiscount, que implementa a interface DiscountStrategy.
 class SeasonalDiscount implements DiscountStrategy
 {
+    // Método que calcula o desconto com base no valor do pedido.
     public function calculate(float $orderAmount): float
     {
-        if ($orderAmount >= 300) {
+        if ($orderAmount => 300) {  
+            // Se o valor for 300 ou mais, retorna um desconto fixo de 45.00.
             return 45.00;
         }
+
+        // Caso contrário, retorna um desconto fixo menor, de 10.00.
         return 10.00;
     }
 }
