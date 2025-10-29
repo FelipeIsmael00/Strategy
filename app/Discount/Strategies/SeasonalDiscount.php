@@ -2,16 +2,16 @@
 
 namespace App\Discount\Strategies;
 
-// Importa a interface DiscountStrategy, que a classe SeasonalDiscount vai implementar.
+// Importa a interface DiscountStrategy, que a classe SeasonalDiscount vai implementar
 use App\Discount\DiscountStrategy;
 
-// Define a classe SeasonalDiscount, que implementa a interface DiscountStrategy.
+// Define a classe SeasonalDiscount, que implementa a interface DiscountStrategy
 class SeasonalDiscount implements DiscountStrategy
 {
-// Método que pega o contrato feito na interface DiscountStrategy e calcula o desconto com base no valor do pedido.
+// Método que pega o contrato feito na interface DiscountStrategy e calcula o desconto com base no valor do pedido
     public function calculate(float $orderAmount): float
     {
-// se o valor for 300 ou mais, retorna um desconto fixo de 45, caso contrário, retorna um desconto fixo menor, de 10 com o operador ternário.
+// se o valor for 300 ou mais, retorna um desconto fixo de 45, caso contrário, retorna um desconto fixo menor, de 10 com o operador ternário
         return $orderAmount > 300 ? 45.00 : 10.00;
     }
 }
