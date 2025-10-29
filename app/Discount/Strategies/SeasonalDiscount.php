@@ -11,7 +11,7 @@ class SeasonalDiscount implements DiscountStrategy
 // Método que pega o contrato feito na interface DiscountStrategy e calcula o desconto com base no valor do pedido.
     public function calculate(float $orderAmount): float
     {
-// Essa linha usa o operador ternário, se o valor for 300 ou mais, retorna um desconto fixo de 45.00, caso contrário, retorna um desconto fixo menor, de 10.00.
+// se o valor for 300 ou mais, retorna um desconto fixo de 45, caso contrário, retorna um desconto fixo menor, de 10 com o operador ternário.
         return $orderAmount > 300 ? 45.00 : 10.00;
     }
 }
