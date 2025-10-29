@@ -63,5 +63,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 PARA RODAR O TESTE:
 
+Rode no terminal:
+
+composer dump-autoload
+
+Após rodar esse comando, rode isso:
+
 vendor/bin/phpunit --filter SeasonalDiscountTest --debug
+
+
 
