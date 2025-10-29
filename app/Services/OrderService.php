@@ -58,6 +58,7 @@ class OrderService
             'fixed' => new FixedDiscount(),
             'percentage' => new PercentageDiscount(),
             'vip' => new VipDiscount(),
+    // Implementação do método de desconto SeasonalDiscount
             'seasonal' => new SeasonalDiscount(),
             default => throw new \InvalidArgumentException("Tipo de desconto inválido."),
         };
